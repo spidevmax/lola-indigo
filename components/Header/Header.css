@@ -1,0 +1,36 @@
+header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+#icon {
+  width: 70px;
+  height: 70px;
+}
+
+#icon:hover {
+  transform: rotate(40deg);
+}
+
+header > ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+header > ul > li> button{
+  background: none;
+  border: none;
+}
+
+header > ul > li > button > img:hover{
+  scale: 1.2;
+  filter: invert(16%) sepia(68%) saturate(6910%) hue-rotate(353deg)
+    brightness(88%) contrast(99%);
+}
