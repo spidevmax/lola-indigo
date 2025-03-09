@@ -13,6 +13,7 @@ const Menu = () => `
         <li><a href="/videos">Vídeos</a></li>
         <li><a href="/gira">Gira</a></li>
         <li><a href="/tienda">Tienda</a></li>
+        <li><a href="/contacto">Contacto</a></li>
       </ul>
     </nav>
 `;

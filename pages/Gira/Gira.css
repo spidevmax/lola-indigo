@@ -1,0 +1,43 @@
+.gira {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.gira ol {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gira li {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.gira p {
+  width: 25%;
+  height: auto;
+  color: black;
+}
+
+.gira a {
+  color: aqua;
+}

@@ -1,11 +1,15 @@
 import "./Inicio.css";
 import data from "../../data/data.js";
 
-const { hero_desktop_video, hero_mobile_video } = data;
+const { hero_desktop_video, hero_mobile_video, title, ascii_art } = data;
 
 export const Inicio = () => {
   const main = document.querySelector("main");
   main.innerHTML = `
+     <div class="splash">
+        <pre>${ascii_art}</pre>
+        <span class="cursor">|</span>
+      </div>
     <section class="inicio">
       <video autoplay muted loop playsinline class="mobile-video">
           <source
@@ -19,5 +23,9 @@ export const Inicio = () => {
             type="video/mp4"
           />
         </video>
+        <div class="info">
+          <h1>${title}</h1>
+          <a href="/gira" class="btn primary">Comprar entradas</a>
+        </div>
     </section>`;
 };

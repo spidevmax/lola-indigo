@@ -1,13 +1,53 @@
 .inicio {
   width: 100%;
   height: auto;
-}
-
-video {
-  width: 100%;
-  height: auto;
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
 .desktop-video {
   display: none;
+}
+
+.info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+.splash {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  z-index: 5;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
 }

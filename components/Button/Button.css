@@ -1,35 +1,39 @@
 .btn {
-  font-weight: 500;
-  letter-spacing: 1.2px;
-  border: none;
+  width: 60px;
+  height: 50px;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+
+.btn.primary {
+  width: 200px;
+  height: 50px;
   border-radius: 100px;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--pumpkin);
-  transition: 0.5s ease-in-out;
-}
-
-.btn.primary {
-  width: 90px;
-  height: 90px;
-  font-size: 3em;
-  cursor: pointer;
+  font-size: 15px;
+  background-color: var(--green);
+  color: black;
+  text-align: center;
+  transition: all 0.2s;
 }
 
 .btn.primary:hover {
-  background-color: var(--electric-indigo);
-  rotate: 1turn;
+  background: #c4e201;
 }
 
 .btn.secondary {
-  width: 150px;
-  height: 40px;
-  font-size: 1em;
-  color: var(--raisin-black);
+  background: none;
+  border: none;
 }
 
-.btn.secondary:hover {
-  background-color: var(--electric-indigo);
-  color: var(--mint-cream);
+.btn > img{
+  width: 20px;
+  height: 20px;
 }
+

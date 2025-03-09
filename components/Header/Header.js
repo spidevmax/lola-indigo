@@ -1,17 +1,18 @@
 import "./Header.css";
 import Menu from "../Menu/Menu.js";
+import Button from "../Button/Button.js";
 import data from "../../data/data.js";
 
-const { icon, icon_alt} = data;
+const { icon, icon_alt } = data;
 
 const Header = () => `
 <header>
   ${Menu()}
   <a href="/"><img id="icon" src="${icon}" alt="${icon_alt}" /></a>
   <ul>
-    <li><button><img src="/icons/search.svg" alt="Search"></button></li>
-    <li><button><img src="/icons/shopping-cart.svg" alt="Shopping cart"></button></li>
-    <li><button><img src="/icons/person.svg" alt="Person"></button></li>
+    <li>${Button("/icons/magnifying-glass-solid.svg", "secondary", true)}</li>
+    <li>${Button("/icons/cart-shopping-solid.svg", "secondary", true)}</li>
+    <li>${Button("/icons/user-solid.svg", "secondary", true)}</li>
   </ul>
 </header>
 `;

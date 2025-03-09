@@ -4,6 +4,7 @@ import {Musica} from "../pages/Musica/Musica";
 import {Videos} from "../pages/Videos/Videos";
 import {Gira} from "../pages/Gira/Gira";
 import {Tienda} from "../pages/Tienda/Tienda";
+import {Contacto} from "../pages/Contacto/Contacto";
 import {NoEncontrada} from "../pages/NoEncontrada/NoEncontrada";
 
 // Definimos las rutas
@@ -13,6 +14,7 @@ const routes = [
   { path: "/videos", page: Videos },
   { path: "/gira", page: Gira },
   { path: "/tienda", page: Tienda },
+  { path: "/contacto", page: Contacto },
 ];
 
 // Función principal del router
