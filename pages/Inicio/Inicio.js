@@ -1,31 +1,29 @@
 import "./Inicio.css";
 import data from "../../data/data.js";
 
-const { hero_desktop_video, hero_mobile_video, title, ascii_art } = data;
+const { title, subtitle } = data;
 
 export const Inicio = () => {
-  const main = document.querySelector("main");
-  main.innerHTML = `
-     <div class="splash">
-        <pre>${ascii_art}</pre>
-        <span class="cursor">|</span>
-      </div>
+  return `
     <section class="inicio">
-      <video autoplay muted loop playsinline class="mobile-video">
-          <source
-            src="${hero_mobile_video}"
-            type="video/mp4"
-          />
-        </video>
-        <video autoplay muted loop playsinline class="desktop-video">
-          <source
-            src="${hero_desktop_video}"
-            type="video/mp4"
-          />
-        </video>
+      <video id="video-background" autoplay loop muted playsinline>
+        <source id="video-source" src="" type="video/mp4">
+        Tu navegador no soporta videos.
+      </video>
         <div class="info">
           <h1>${title}</h1>
-          <a href="/gira" class="btn primary">Comprar entradas</a>
+          <h2 class="marker">${subtitle}</h2>
+          <div class="line">
+            <hr/>
+            <hr/>
+            <hr/>
+            <hr/>
+          </div>
+          <div class="tour-name">
+            <h3>La Bruja</h3>
+            <h3>La Niña</h3>
+            <h3>El Dragón</h3>
+          </div>
         </div>
     </section>`;
 };

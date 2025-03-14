@@ -1,60 +1,21 @@
 import "./Contacto.css";
+import Button from "../../components/Button/Button";
 
 export const Contacto = () => {
-  const main = document.querySelector("main");
-  main.innerHTML = `
+  return `
     <section class="contacto">
-        <h2>Contacto</h2>
-          <div class="entry">
-        <section class="form-information">
-          <form
-            action="/"
-            method="post"
-            enctype="application/x-www-form-urlencoded"
-            target="_self"
-            accept-charset="UTF-8"
-            autocomplete="off"
-            novalidate
-          >
-            <label for="first_name">Nombre:</label>
-            <input
-              type="text"
-              name="first_name"
-              id="first_name"
-              placeholder="Nombre"
-              required
-            />
-            <label for="email">E-mail:</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="E-mail"
-              required
-            />
-            <label for="first_name">Asunto:</label>
-            <input
-              type="text"
-              name="first_name"
-              id="first_name"
-              placeholder="Asunto"
-              required
-            />
-            <label for="phone">
-  Enter your phone number:<br />
-  <small>Format: 123-456-7890</small>
-</label>
-
-<input
-  type="tel"
-  id="phone"
-  name="phone"
-  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-  required />
-
-            <button type="submit">Enviar</button>
-          </form>
-        </section>
-      </div>
-    </section>`;
+      <h2>Contacto</h2>
+      <form action="">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" placeholder="Nombre" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required />
+        <label for="subject">Asunto:</label>
+        <input type="text" id="subject" name="subject" placeholder="Asunto" required />
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
+        ${Button("Enviar", "primary", false)}
+      </form>
+    </section>
+  `;
 };

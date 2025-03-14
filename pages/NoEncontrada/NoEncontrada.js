@@ -1,8 +1,7 @@
 import "./NoEncontrada.css";
 
 export const NoEncontrada = () => {
-  const main = document.querySelector("main");
-  main.innerHTML = `
+  return `
     <section class="no-encontrada">
         <h2>Error 404</h2>
         <p>La página que buscas no existe</p>

@@ -9,7 +9,6 @@ const Footer = () => `
   <ul class="social-media">
     ${iterator(social_media_links, "icon")}
   </ul>
-  <p>Suscríbete a la comunidad de Lola Índigo para enterarte de todas las novedades y acceder a las ventas exclusivas</p>
   <ul class="legal">
     ${iterator(legal_links, "text")}
   </ul>

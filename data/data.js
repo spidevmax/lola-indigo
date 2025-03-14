@@ -1,9 +1,8 @@
 const data = {
   icon: "/icons/grx.svg",
   icon_alt: "Icono de GRX",
-  title: "Gira Estadios 2025",
-  hero_desktop_video: "/videos/hero-desktop.mp4",
-  hero_mobile_video: "/videos/hero-mobile.mp4",
+  title: "Gira 2025",
+  subtitle: "Los Estadios",
   ascii_art: `
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%##%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -462,7 +461,7 @@ const data = {
     {
       date: "14 de junio de 2025",
       city: "Madrid",
-      venue: "Estadio Santiago Bernabéu",
+      venue: "Riyadh Air Metropolitano",
       tickets: "",
     },
     {

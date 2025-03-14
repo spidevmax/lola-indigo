@@ -1,11 +1,14 @@
-// Importamos todas las páginas
-import {Inicio} from "../pages/Inicio/Inicio";
-import {Musica} from "../pages/Musica/Musica";
-import {Videos} from "../pages/Videos/Videos";
-import {Gira} from "../pages/Gira/Gira";
-import {Tienda} from "../pages/Tienda/Tienda";
-import {Contacto} from "../pages/Contacto/Contacto";
-import {NoEncontrada} from "../pages/NoEncontrada/NoEncontrada";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import { Inicio } from "../pages/Inicio/Inicio";
+import { Musica } from "../pages/Musica/Musica";
+import { Videos } from "../pages/Videos/Videos";
+import { Gira } from "../pages/Gira/Gira";
+import { Tienda } from "../pages/Tienda/Tienda";
+import { Contacto } from "../pages/Contacto/Contacto";
+import { NoEncontrada } from "../pages/NoEncontrada/NoEncontrada";
+import { updateHeaderClass } from "./updateHeaderClass";
+import { setupHamburgerMenu } from "./setupHamburgerMenu";
 
 // Definimos las rutas
 const routes = [
@@ -15,55 +18,75 @@ const routes = [
   { path: "/gira", page: Gira },
   { path: "/tienda", page: Tienda },
   { path: "/contacto", page: Contacto },
+  { path: "*", page: NoEncontrada },
 ];
 
-// Función principal del router
+/**
+ * Renderiza la página correspondiente según la ruta actual.
+ */
 export const router = () => {
-  // Obtenemos la ruta actual
   const path = window.location.pathname;
+  const route = routes.find((r) => r.path === path) || { page: NoEncontrada };
 
-  // Buscamos la ruta en el array de rutas
-  const route = routes.find((route) => route.path === path) || {
-    page: NoEncontrada,
-  };
+  const app = document.querySelector("#app");
+  if (!app) {
+    console.error("No se encontró el elemento #app.");
+    return;
+  }
 
-  // Renderizamos la página correspondiente
-  route.page();
+  // Renderiza el contenido directamente con templates strings
+  app.innerHTML = `
+    ${Header()}
+    <main>${route.page()}</main>
+    ${Footer()}
+  `;
+
+  // Actualiza la clase del header
+  updateHeaderClass();
+  setupHamburgerMenu(); // Reasigna el evento del menú hamburguesa
 };
 
-// Función para manejar la navegación sin recarga
+/**
+ * Maneja la navegación sin recarga.
+ */
 export const navListeners = () => {
-  const nav = document.querySelector("nav"); // Asegúrate de tener un `<nav>` en tu HTML
-  if (!nav) return;
+  const nav = document.querySelector("nav");
+  if (!nav) {
+    console.warn("No se encontró <nav>, los eventos no se agregarán.");
+    return;
+  }
 
-  // Usamos delegación de eventos
   nav.addEventListener("click", (ev) => {
-    const link = ev.target.closest("a"); // Detectamos el enlace
-    if (!link) return; // Si no es un enlace, salimos
+    const link = ev.target.closest("a");
+    if (
+      !link ||
+      link.target === "_blank" ||
+      link.hostname !== window.location.hostname
+    )
+      return;
 
-    ev.preventDefault(); // Evitamos la recarga de la página
-
-    // Actualizamos el historial del navegador
-    const path = link.pathname;
-    history.pushState(null, null, path);
-
-    // Actualizamos las clases activas de los enlaces
-    const navLinks = document.querySelectorAll("nav a");
-    for (const el of navLinks) {
-      el.classList.remove("active");
-    }
-    link.classList.add("active");
-
-    // Llamamos al router para renderizar la nueva página
+    ev.preventDefault();
+    history.pushState(null, "", link.pathname);
     router();
+    updateActiveNav(link);
   });
+
+  // Manejo del botón "atrás" del navegador
+  window.onpopstate = router;
 };
 
-// Inicialización del enrutador y listeners
-window.addEventListener("DOMContentLoaded", () => {
-  router(); // Renderizamos la ruta inicial
-  navListeners(); // Configuramos los listeners para la navegación
-});
+/**
+ * Resalta el enlace activo en la navegación.
+ */
+const updateActiveNav = (activeLink) => {
+  document
+    .querySelectorAll("nav a")
+    .forEach((el) => el.classList.remove("active"));
+  activeLink.classList.add("active");
+};
 
-// Detectamos cambios en el historial (navegación hacia adelante/atrás)
-window.addEventListener("popstate", router);
+// Inicializa el router
+document.addEventListener("DOMContentLoaded", () => {
+  router();
+  navListeners();
+});

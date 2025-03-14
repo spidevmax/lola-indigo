@@ -8,8 +8,8 @@ const { icon, icon_alt } = data;
 const Header = () => `
 <header>
   ${Menu()}
-  <a href="/"><img id="icon" src="${icon}" alt="${icon_alt}" /></a>
-  <ul>
+  <a href="/"><img class="icon" src="${icon}" alt="${icon_alt}" /></a>
+  <ul class="buttons">
     <li>${Button("/icons/magnifying-glass-solid.svg", "secondary", true)}</li>
     <li>${Button("/icons/cart-shopping-solid.svg", "secondary", true)}</li>
     <li>${Button("/icons/user-solid.svg", "secondary", true)}</li>
