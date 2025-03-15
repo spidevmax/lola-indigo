@@ -34,11 +34,11 @@ export const router = () => {
     return;
   }
 
-  // Renderiza el contenido directamente con templates strings
+  // Renderiza la página, sin footer si es la página de inicio
   app.innerHTML = `
     ${Header()}
     <main>${route.page()}</main>
-    ${Footer()}
+    ${path !== "/" ? Footer() : ""}
   `;
 
   // Actualiza la clase del header
@@ -50,20 +50,15 @@ export const router = () => {
  * Maneja la navegación sin recarga.
  */
 export const navListeners = () => {
-  const nav = document.querySelector("nav");
-  if (!nav) {
-    console.warn("No se encontró <nav>, los eventos no se agregarán.");
-    return;
-  }
-
-  nav.addEventListener("click", (ev) => {
+  document.body.addEventListener("click", (ev) => {
     const link = ev.target.closest("a");
     if (
       !link ||
       link.target === "_blank" ||
       link.hostname !== window.location.hostname
-    )
+    ) {
       return;
+    }
 
     ev.preventDefault();
     history.pushState(null, "", link.pathname);
@@ -71,8 +66,7 @@ export const navListeners = () => {
     updateActiveNav(link);
   });
 
-  // Manejo del botón "atrás" del navegador
-  window.onpopstate = router;
+  window.addEventListener("popstate", router);
 };
 
 /**

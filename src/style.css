@@ -25,7 +25,7 @@
   --border: 2px solid black;
   --body-font: "Outfit", serif;
   --header-font: "Audiowide", sans-serif;
-  --other-font: "Cubenzis", sans-serif;
+  --cubenzis-font: "Cubenzis", sans-serif;
   --marker-font: "Permanent Marker", cursive;
 }
 
@@ -55,10 +55,12 @@ body::-webkit-scrollbar-thumb {
 
 ::-moz-selection {
   background: var(--red);
+  color: var(--ghost-white);
 }
 
 ::selection {
   background: var(--red);
+  color: var(--ghost-white);
 }
 
 h1,
@@ -72,11 +74,14 @@ h3 {
 
 h1 {
   font-size: 2rem;
-  font-family: var(--other-font);
+  font-family: var(--cubenzis-font);
 }
 
 h2 {
   font-size: 2rem;
+  color: red;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--rich-black);
 }
 
 hr {

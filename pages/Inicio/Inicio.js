@@ -6,9 +6,11 @@ const { title, subtitle } = data;
 export const Inicio = () => {
   return `
     <section class="inicio">
-      <video id="video-background" autoplay loop muted playsinline>
-        <source id="video-source" src="" type="video/mp4">
-        Tu navegador no soporta videos.
+      <video id="video-mobile" autoplay muted loop playsinline>
+        <source src="/videos/video-mobile.mp4">
+      </video>
+      <video id="video-desktop" autoplay muted loop playsinline>
+        <source src="/videos/video-desktop.mp4">
       </video>
         <div class="info">
           <h1>${title}</h1>
