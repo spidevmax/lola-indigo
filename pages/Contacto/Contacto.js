@@ -5,7 +5,13 @@ export const Contacto = () => {
   return `
     <section class="contacto">
       <h2>Contacto</h2>
-      <form action="">
+      <form action="/"
+            method="post"
+            enctype="application/x-www-form-urlencoded"
+            target="_self"
+            accept-charset="UTF-8"
+            autocomplete="off"
+            novalidate>
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" placeholder="Nombre" required />
         <label for="email">Email:</label>

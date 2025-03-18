@@ -321,140 +321,146 @@ const data = {
   ],
   product_links: [
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106258/akelarre-vinilo_ht043l.webp",
       name: "Akelarre - Vinilo",
       price: "24,99",
-      format: "Música",
+      category: "Música",
+      description: "Edición en vinilo negro del álbum debut de Lola Indigo. Incluye “Santería” y “Luna”.",
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-camiseta-oversized-akelarre",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106261/camiseta-oversized-akelarre_t9xgmz.webp",
       name: "Camiseta Oversized Akelarre",
       price: "30,00",
-      format: "Moda",
+      category: "Moda",
+      description: "Camiseta exclusiva conmemorativa de Akelarre de Lola Índigo. Incluye un diseño fotográfico exclusivo de esta era en la parte delantera y logotipo de Akelarre en la parte trasera. ¡No te quedes sin esta camiseta tan especial!",
+      sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106261/la-nin%CC%83a-alt-cover-cd_ktw6f6.webp",
       name: "La Niña (Alt. Cover) - CD",
       price: "15,99",
-      format: "Vinilo",
+      category: "Música",
+      description: "Edición en formato digisleeve CD con nueva portada del segundo álbum de Lola Índigo.",
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106259/camiseta-oversized-reedicion-dolores_mcflfl.webp",
       name: "Camiseta Oversized Reedición Dolores",
       price: "30,00",
-      format: "Vinilo",
+      category: "Moda",
+      description: "¡Nos lo habéis pedido y aquí está! Consigue la reedición de la camiseta Dolores de Lola Índigo.",
+      sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106260/crop-top-el-dragon-plata_gouc4r.webp",
       name: "Crop Top El Dagón Plata",
       price: "20,00",
-      format: "Vinilo",
+      category: "Moda",
+      description: "Crop Top El Dragón plateado de Lola Índigo. Incluye detalle gráfico de dragones en la parte delantera.",
+      sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106263/set-stickers-el-dragon_inqwbd.webp",
       name: "Set de Stickers El Dragón",
       price: "7,00",
-      format: "Vinilo",
+      category: "Accesorios",
+      description: "Set de  6 pegatinas vinílicas con diseños exclusivos de la era de El Dragón. Las pegatinas de vinilo están fabricadas e impresas sobre polímero, que lo hace más resistente a los cambios de temperatura y agua.",
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106262/camiseta-las-eras-akelarre_l9gfl5.webp",
       name: "Camiseta Las Eras Akelarre",
       price: "30,00",
-      format: "Vinilo",
+      category: "Moda",
+      description: "Camiseta con diseño exclusivo de la muñeca 'Ya No Quiero Ná' de Lola Índigo sobre el logotipo oficial de Akelarre.",
+      sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106260/camiseta-las-eras-la-nin%CC%83a_sequmv.webp",
       name: "Camiseta Las Eras La Niña",
       price: "30,00",
-      format: "Vinilo",
+      category: "Moda",
+      description: "Camiseta con diseño exclusivo de la muñeca 'La Niña de la Escuela' de Lola Índigo con el logotipo oficial de La Niña.",
+      sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106262/camiseta-las-eras-el-dragon_wtzbpb.webp",
       name: "Camiseta Las Eras El Dragón",
       price: "30,00",
-      format: "Vinilo",
+      category: "Moda",
+      description: "Camiseta con diseño exclusivo de la muñeca 'AN1MAL' de Lola Índigo sobre el logotipo oficial del Dragón.",
+      sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106257/akelarre-la-nin%CC%83a-el-dragon-cassette_rbcbj7.webp",
       name: "Akelarre (Edición V Aniversario) + La Niña + El Dragón - Box Set (3 Cassette)",
       price: "49,99",
-      format: "Vinilo",
+      category: "Música",
+      description: "Set de las 3 Cassette de los Álbumes Akelarre (Edición V Aniversario), 'La Niña' y  'El Dragón'.",
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106258/akelarre-vinilo-lavender_rvxujj.webp",
       name: "Akelarre (Edición V Aniversario) - Vinilo (Color Reciclado Eco-Mix Lavender)",
       price: "22,99",
-      format: "Vinilo",
+      category: "Música",
+      description: "Edición V Aniversario del álbum debut de Lola Indigo. Prensado en vinilo reciclado Eco-Mix Color Lavender. Incluye “Santería” y “Luna”.",
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106258/akelarre-cassette_smdf3a.webp",
       name: "Akelarre (Edición V Aniversario) - Cassette",
       price: "17,99",
-      format: "Vinilo",
+      category: "Música",
+      description: "Edición V Aniversario del álbum debut de Lola Indigo. Cassette con carcasa morada transparente. Incluye “Santería” y “Luna”.",
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106258/akelarre-cd_raocun.webp",
       name: "Akelarre (Edición V Aniversario) - CD",
       price: "15,99",
-      format: "Vinilo",
+      category: "Música",
+      description: "Edición V Aniversario del álbum debut de Lola Indigo. Formato CD Digisleeve. Incluye “Santería” y “Luna”.",
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106258/la-nin%CC%83a-cassette_w1eojy.webp",
       name: "La Niña - Cassette",
       price: "17,99",
-      format: "Vinilo",
+      category: "Música",
+      description: "Edición del segundo álbum de Lola Indigo en formato cassette con carcasa rosa.",
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106259/la-nin%CC%83a-cd_ue0kss.webp",
       name: "La Niña - CD",
       price: "14,99",
-      format: "Vinilo",
+      category: "Música",
+      description: "Lola Indigo vuelve con su segundo álbum y demuestra que su progresión en el mundo urbano es imparable.",
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106260/el-dragon-cassette_rnlh0v.webp",
       name: "El Dragón - Cassette",
       price: "17,99",
-      format: "Vinilo",
+      category: "Música",
+      description: "Edición del tercer álbum de Lola Indigo en formato cassette con carcasa verde transparente.",
     },
     {
-      href: "https://tienda.lolaindigomusic.com/products/lola-indigo-akelarre-vinilo",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106263/llavero_grvog0.webp",
       name: "LLavero Lola Índigo",
       price: "6,99",
-      format: "Vinilo",
+      category: "Accesorios",
+      description: "¡El ya icónico logo del concierto de Lola Indigo en el Santiago Bernabéu viene en forma de llavero!",
     },
   ],
   tour_links: [

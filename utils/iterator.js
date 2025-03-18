@@ -31,19 +31,15 @@ export const iterator = (array, type) => {
         .map(
           (item) => `
             <article>
-              <a href="${item.href}" target="_blank">
-                <div class="product-info">
-                  ${Chip(item.format, "red")}
+              <div class="product-info">
+                ${Chip(item.category, "red")}
+              </div>
+              <div class="product-container">
+                <img loading="lazy" src="${item.cover}" alt="${item.name}" class="product-thumbnail"/>
+                <div class="overlay">
+                  <span><img src="/icons/cart-shopping-solid.svg" alt="Shopping cart icon"/></span>
                 </div>
-                <div class="product-container">
-                  <img loading="lazy" src="${item.cover}" alt="${
-            item.name
-          }" class="thumbnail"/>
-                  <div class="overlay">
-                    <span><img src="/icons/cart-shopping-solid.svg" alt="Eye icon"/></span>
-                  </div>
-                </div>
-              </a>
+              </div>
               <h3>${item.name}</h3>
               <h3>${item.price} €</h3>
             </article>

@@ -1,6 +1,9 @@
 .btn {
-  width: 60px;
-  height: 50px;
+  font-family: var(--header-font);
+  color: var(--ghost-white);
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .btn:active {
@@ -10,23 +13,24 @@
 .btn.primary {
   width: 150px;
   height: 50px;
-  border: 2px solid black;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
-  background-color: var(--green);
-  color: black;
   text-align: center;
   transition: all 0.2s;
+  background-color: var(--red);
+  box-shadow: 3px 3px black;
 }
 
 .btn.primary:hover {
-  background: #c4e201;
+  background: white;
+  color: var(--red);
 }
 
 .btn.secondary {
+  width: 60px;
+  height: 50px;
   background: none;
   border: none;
 }

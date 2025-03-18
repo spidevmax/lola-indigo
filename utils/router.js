@@ -9,6 +9,9 @@ import { Contacto } from "../pages/Contacto/Contacto";
 import { NoEncontrada } from "../pages/NoEncontrada/NoEncontrada";
 import { updateHeaderClass } from "./updateHeaderClass";
 import { setupHamburgerMenu } from "./setupHamburgerMenu";
+import data from "../data/data";
+
+const { product_links } = data;
 
 // Definimos las rutas
 const routes = [
@@ -41,8 +44,7 @@ export const router = () => {
     ${path !== "/" ? Footer() : ""}
   `;
 
-  // Actualiza la clase del header
-  updateHeaderClass();
+  updateHeaderClass(); // Actualiza la clase del header
   setupHamburgerMenu(); // Reasigna el evento del menú hamburguesa
 };
 
@@ -78,9 +80,3 @@ const updateActiveNav = (activeLink) => {
     .forEach((el) => el.classList.remove("active"));
   activeLink.classList.add("active");
 };
-
-// Inicializa el router
-document.addEventListener("DOMContentLoaded", () => {
-  router();
-  navListeners();
-});
