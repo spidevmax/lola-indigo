@@ -2,6 +2,29 @@ import Chip from "/components/Chip/Chip";
 
 export const iterator = (array, type) => {
   switch (type) {
+    case "album":
+      return array
+        .map(
+          (item) => `
+        <article>
+          <a href="${item.href}" target="_blank">
+            <div class="video-info">
+              ${Chip(item.year, "green")}
+            </div>
+            <div class="thumbnail-container">
+              <img loading="lazy" src="${item.cover}" alt="${
+            item.title
+          }" class="thumbnail"/>
+              <div class="overlay">
+                <span><img src="https://res.cloudinary.com/darvwfw0u/image/upload/v1742743852/music-solid_dvkkkb.svg" alt="Music icon"/></span>
+              </div>
+            </div>
+          </a>
+          <h3>${item.title}</h3>
+        </article>
+        `
+        )
+        .join("");
     case "video":
       return array
         .map(
@@ -17,7 +40,7 @@ export const iterator = (array, type) => {
             item.title
           }" class="thumbnail"/>
               <div class="overlay">
-                <span><img src="/icons/eye-solid.svg" alt="Eye icon"/></span>
+                <span><img src="https://res.cloudinary.com/darvwfw0u/image/upload/v1742485977/eye-solid_u61yei.svg" alt="Eye icon"/></span>
               </div>
             </div>
           </a>
@@ -35,9 +58,11 @@ export const iterator = (array, type) => {
                 ${Chip(item.category, "red")}
               </div>
               <div class="product-container">
-                <img loading="lazy" src="${item.cover}" alt="${item.name}" class="product-thumbnail"/>
+                <img loading="lazy" src="${item.cover}" alt="${
+            item.name
+          }" class="product-thumbnail"/>
                 <div class="overlay">
-                  <span><img src="/icons/cart-shopping-solid.svg" alt="Shopping cart icon"/></span>
+                  <span><img src="https://res.cloudinary.com/darvwfw0u/image/upload/v1742485978/cart-shopping-solid_fbakdc.svg" alt="Shopping cart icon"/></span>
                 </div>
               </div>
               <h3>${item.name}</h3>
@@ -72,12 +97,14 @@ export const iterator = (array, type) => {
       return array
         .map(
           (item) => `
-                <li>
-                  <p>${item.date}</p>
-                  <p>${item.city}</p>
-                  <p>${item.venue}</p>
-                  <a href="${item.tickets}" target="_blank">Compra</a>
-                </li>
+                <div data-augmented-ui="tl-round tr-2-clip-x border" class="augborder-tour">
+                  <li>
+                    <p>${item.date}</p>
+                    <p>${item.city}</p>
+                    <p>${item.venue}</p>
+                    <a href="${item.tickets}" target="_blank">Entradas</a>
+                  </li>
+                </div>
                 `
         )
         .join("");

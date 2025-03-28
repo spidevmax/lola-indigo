@@ -14,17 +14,15 @@
 :root {
   --dark-slate-gray: #35524aff;
   --slate-gray: #627c85ff;
-  --air-superiority-blue: #779cabff;
-  --tiffany-blue: #a2e8ddff;
   --emerald: #32de8aff;
   --red: #dd1215;
   --rich-black: #031926;
   --ghost-white: #f8f7ff;
-  --green: #cfef00;
-  --spacing: 1rem;
-  --border: 2px solid black;
-  --body-font: "Outfit", serif;
-  --header-font: "Audiowide", sans-serif;
+  --spacing: 20px;
+  --small-spacing: 10px;
+  --border-radius: 10px;
+  --outfit-font: "Outfit", serif;
+  --audiowide-font: "Audiowide", sans-serif;
   --cubenzis-font: "Cubenzis", sans-serif;
   --marker-font: "Permanent Marker", cursive;
 }
@@ -36,8 +34,8 @@
 }
 
 body {
-  color: var(--ghost-white);
-  font-family: var(--body-font);
+  color: var(--rich-black);
+  font-family: var(--outfit-font);
 }
 
 body::-webkit-scrollbar {
@@ -66,10 +64,10 @@ body::-webkit-scrollbar-thumb {
 h1,
 h2,
 h3 {
-  font-family: var(--header-font);
+  font-family: var(--audiowide-font);
   text-transform: uppercase;
   text-align: center;
-  color: black;
+  color: var(--rich-black);
 }
 
 h1 {
@@ -79,7 +77,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  color: red;
+  color: var(--red);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--rich-black);
 }
@@ -87,7 +85,7 @@ h2 {
 hr {
   width: 300px;
   height: 3px;
-  background-color: black;
+  background-color: var(--rich-black);
 }
 
 p {
@@ -100,9 +98,9 @@ li {
 }
 
 a {
-  font-family: var(--header-font);
+  font-family: var(--audiowide-font);
   text-decoration: none;
-  color: inherit;
+  color: var(--ghost-white);
   transition: all 0.5s ease-in-out;
 }
 
@@ -132,5 +130,37 @@ pre:hover {
   }
   100% {
     opacity: 1;
+  }
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing);
+  gap: var(--spacing);
+}
+
+form > input {
+  width: 100%;
+  height: 50px;
+  border: 2px solid var(--rich-black);
+  outline: 5px double var(--dark-slate-gray);
+  border-radius: var(--border-radius);
+  padding: var(--small-spacing);
+  font-family: inherit;
+}
+
+.underlined-link {
+  color: var(--rich-black);
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  form > input {
+    width: 50%;
   }
 }

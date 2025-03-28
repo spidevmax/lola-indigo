@@ -1,12 +1,12 @@
 .gira {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  gap: 20px;
+  padding: var(--spacing);
+  gap: var(--spacing);
 }
 
 .gira ol {
@@ -16,29 +16,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  gap: 20px;
-  padding: 20px;
+  gap: var(--spacing);
+  padding: var(--spacing);
 }
 
 .gira li {
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   align-content: center;
-  gap: 20px;
-  padding: 20px;
+  gap: var(--small-spacing);
+  padding: var(--small-spacing);
   text-align: center;
-  border: 2px solid black;
 }
 
-.gira p {
-  width: 25%;
-  height: auto;
-  color: black;
-}
-
-.gira a {
-  color: aqua;
+.augborder-tour {
+  --aug-border-bg: url("https://i.pinimg.com/originals/1b/7b/9a/1b7b9a3d73ff0529151f53148bd6836b.gif");
+  --aug-border-opacity: 1;
+  --aug-border-all: 6px;
+  background: url("https://i.pinimg.com/736x/20/4b/83/204b833e5cbed704e119c371311dc285.jpg");
+  color: white;
 }

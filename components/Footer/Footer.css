@@ -6,8 +6,8 @@ footer {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  padding: 10px;
-  gap: 10px;
+  padding: var(--small-spacing);
+  gap: var(--small-spacing);
   background-color: var(--rich-black);
 }
 
@@ -17,13 +17,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: var(--spacing);
 }
 
 .social-media img {
   width: 40px;
   height: 40px;
-  background-color: rgb(25, 0, 255);
+  background-color: var(--slate-gray);
   border-radius: 50%;
   padding: 8px;
 }
@@ -37,5 +37,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: var(--small-spacing);
+}
+
+.copyright {
+  color: var(--ghost-white);
 }

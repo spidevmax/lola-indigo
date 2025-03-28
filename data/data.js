@@ -1,5 +1,5 @@
 const data = {
-  icon: "/icons/grx.svg",
+  icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485976/grx_yxqidg.svg",
   icon_alt: "Icono de GRX",
   title: "Gira 2025",
   subtitle: "Los Estadios",
@@ -61,7 +61,37 @@ const data = {
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 `,
   copyright: "&copy; 2025, Lola Índigo. Powered by",
-  video_links: [
+  albums: [
+    {
+      href: "https://music.apple.com/es/album/grx/1727738184",
+      title: "GRX",
+      cover:
+        "https://res.cloudinary.com/darvwfw0u/image/upload/v1743009911/grx-edit-cover_ub6d7i.png",
+      year: "2024",
+    },
+    {
+      href: "https://music.apple.com/es/album/el-drag%C3%B3n/1676646062",
+      title: "EL DRAGÓN",
+      cover:
+        "https://res.cloudinary.com/darvwfw0u/image/upload/v1743008348/el-dragon-edit-cover_z2azbi.png",
+      year: "2023",
+    },
+    {
+      href: "https://music.apple.com/es/album/la-ni%C3%B1a/1571262834",
+      title: "La Niña",
+      cover:
+        "https://res.cloudinary.com/darvwfw0u/image/upload/v1743009779/la-nin%CC%83a-edit-cover_dj6b9n.png",
+      year: "2021",
+    },
+    {
+      href: "https://music.apple.com/es/album/akelarre/1462355433",
+      title: "Akelarre",
+      cover:
+        "https://res.cloudinary.com/darvwfw0u/image/upload/v1743008951/akelarre-edit-cover_pfcscg.png",
+      year: "2019",
+    },
+  ],
+  videos: [
     {
       href: "https://youtu.be/HGvUZh3JAoM?feature=shared",
       title: "LA REINA (REMIX)",
@@ -326,7 +356,8 @@ const data = {
       name: "Akelarre - Vinilo",
       price: "24,99",
       category: "Música",
-      description: "Edición en vinilo negro del álbum debut de Lola Indigo. Incluye “Santería” y “Luna”.",
+      description:
+        "Edición en vinilo negro del álbum debut de Lola Indigo. Incluye 'Santería' y 'Luna'.",
     },
     {
       cover:
@@ -334,7 +365,8 @@ const data = {
       name: "Camiseta Oversized Akelarre",
       price: "30,00",
       category: "Moda",
-      description: "Camiseta exclusiva conmemorativa de Akelarre de Lola Índigo. Incluye un diseño fotográfico exclusivo de esta era en la parte delantera y logotipo de Akelarre en la parte trasera. ¡No te quedes sin esta camiseta tan especial!",
+      description:
+        "Camiseta exclusiva conmemorativa de Akelarre de Lola Índigo. Incluye un diseño fotográfico exclusivo de esta era en la parte delantera y logotipo de Akelarre en la parte trasera.",
       sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
@@ -343,7 +375,8 @@ const data = {
       name: "La Niña (Alt. Cover) - CD",
       price: "15,99",
       category: "Música",
-      description: "Edición en formato digisleeve CD con nueva portada del segundo álbum de Lola Índigo.",
+      description:
+        "Edición en formato digisleeve CD con nueva portada del segundo álbum de Lola Índigo.",
     },
     {
       cover:
@@ -351,7 +384,8 @@ const data = {
       name: "Camiseta Oversized Reedición Dolores",
       price: "30,00",
       category: "Moda",
-      description: "¡Nos lo habéis pedido y aquí está! Consigue la reedición de la camiseta Dolores de Lola Índigo.",
+      description:
+        "Consigue la reedición de la camiseta Dolores de Lola Índigo.",
       sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
@@ -360,7 +394,8 @@ const data = {
       name: "Crop Top El Dagón Plata",
       price: "20,00",
       category: "Moda",
-      description: "Crop Top El Dragón plateado de Lola Índigo. Incluye detalle gráfico de dragones en la parte delantera.",
+      description:
+        "Crop Top El Dragón plateado de Lola Índigo. Incluye detalle gráfico de dragones en la parte delantera.",
       sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
@@ -369,7 +404,8 @@ const data = {
       name: "Set de Stickers El Dragón",
       price: "7,00",
       category: "Accesorios",
-      description: "Set de  6 pegatinas vinílicas con diseños exclusivos de la era de El Dragón. Las pegatinas de vinilo están fabricadas e impresas sobre polímero, que lo hace más resistente a los cambios de temperatura y agua.",
+      description:
+        "Set de  6 pegatinas vinílicas con diseños exclusivos de la era de El Dragón. Las pegatinas de vinilo están fabricadas e impresas sobre polímero, que lo hace más resistente a los cambios de temperatura y agua.",
     },
     {
       cover:
@@ -377,7 +413,8 @@ const data = {
       name: "Camiseta Las Eras Akelarre",
       price: "30,00",
       category: "Moda",
-      description: "Camiseta con diseño exclusivo de la muñeca 'Ya No Quiero Ná' de Lola Índigo sobre el logotipo oficial de Akelarre.",
+      description:
+        "Camiseta con diseño exclusivo de la muñeca 'Ya No Quiero Ná' de Lola Índigo sobre el logotipo oficial de Akelarre.",
       sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
@@ -386,7 +423,8 @@ const data = {
       name: "Camiseta Las Eras La Niña",
       price: "30,00",
       category: "Moda",
-      description: "Camiseta con diseño exclusivo de la muñeca 'La Niña de la Escuela' de Lola Índigo con el logotipo oficial de La Niña.",
+      description:
+        "Camiseta con diseño exclusivo de la muñeca 'La Niña de la Escuela' de Lola Índigo con el logotipo oficial de La Niña.",
       sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
@@ -395,7 +433,8 @@ const data = {
       name: "Camiseta Las Eras El Dragón",
       price: "30,00",
       category: "Moda",
-      description: "Camiseta con diseño exclusivo de la muñeca 'AN1MAL' de Lola Índigo sobre el logotipo oficial del Dragón.",
+      description:
+        "Camiseta con diseño exclusivo de la muñeca 'AN1MAL' de Lola Índigo sobre el logotipo oficial del Dragón.",
       sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
@@ -404,7 +443,8 @@ const data = {
       name: "Akelarre (Edición V Aniversario) + La Niña + El Dragón - Box Set (3 Cassette)",
       price: "49,99",
       category: "Música",
-      description: "Set de las 3 Cassette de los Álbumes Akelarre (Edición V Aniversario), 'La Niña' y  'El Dragón'.",
+      description:
+        "Set de las 3 Cassette de los Álbumes Akelarre (Edición V Aniversario), 'La Niña' y  'El Dragón'.",
     },
     {
       cover:
@@ -412,7 +452,8 @@ const data = {
       name: "Akelarre (Edición V Aniversario) - Vinilo (Color Reciclado Eco-Mix Lavender)",
       price: "22,99",
       category: "Música",
-      description: "Edición V Aniversario del álbum debut de Lola Indigo. Prensado en vinilo reciclado Eco-Mix Color Lavender. Incluye “Santería” y “Luna”.",
+      description:
+        "Edición V Aniversario del álbum debut de Lola Indigo. Prensado en vinilo reciclado Eco-Mix Color Lavender. Incluye “Santería” y “Luna”.",
     },
     {
       cover:
@@ -420,7 +461,8 @@ const data = {
       name: "Akelarre (Edición V Aniversario) - Cassette",
       price: "17,99",
       category: "Música",
-      description: "Edición V Aniversario del álbum debut de Lola Indigo. Cassette con carcasa morada transparente. Incluye “Santería” y “Luna”.",
+      description:
+        "Edición V Aniversario del álbum debut de Lola Indigo. Cassette con carcasa morada transparente. Incluye “Santería” y “Luna”.",
     },
     {
       cover:
@@ -428,7 +470,8 @@ const data = {
       name: "Akelarre (Edición V Aniversario) - CD",
       price: "15,99",
       category: "Música",
-      description: "Edición V Aniversario del álbum debut de Lola Indigo. Formato CD Digisleeve. Incluye “Santería” y “Luna”.",
+      description:
+        "Edición V Aniversario del álbum debut de Lola Indigo. Formato CD Digisleeve. Incluye “Santería” y “Luna”.",
     },
     {
       cover:
@@ -436,7 +479,8 @@ const data = {
       name: "La Niña - Cassette",
       price: "17,99",
       category: "Música",
-      description: "Edición del segundo álbum de Lola Indigo en formato cassette con carcasa rosa.",
+      description:
+        "Edición del segundo álbum de Lola Indigo en formato cassette con carcasa rosa.",
     },
     {
       cover:
@@ -444,7 +488,8 @@ const data = {
       name: "La Niña - CD",
       price: "14,99",
       category: "Música",
-      description: "Lola Indigo vuelve con su segundo álbum y demuestra que su progresión en el mundo urbano es imparable.",
+      description:
+        "Lola Indigo vuelve con su segundo álbum y demuestra que su progresión en el mundo urbano es imparable.",
     },
     {
       cover:
@@ -452,7 +497,8 @@ const data = {
       name: "El Dragón - Cassette",
       price: "17,99",
       category: "Música",
-      description: "Edición del tercer álbum de Lola Indigo en formato cassette con carcasa verde transparente.",
+      description:
+        "Edición del tercer álbum de Lola Indigo en formato cassette con carcasa verde transparente.",
     },
     {
       cover:
@@ -460,25 +506,27 @@ const data = {
       name: "LLavero Lola Índigo",
       price: "6,99",
       category: "Accesorios",
-      description: "¡El ya icónico logo del concierto de Lola Indigo en el Santiago Bernabéu viene en forma de llavero!",
+      description:
+        "¡El ya icónico logo del concierto de Lola Indigo en el Santiago Bernabéu viene en forma de llavero!",
     },
   ],
   tour_links: [
     {
-      date: "14 de junio de 2025",
+      date: "14 junio 2025",
       city: "Madrid",
       venue: "Riyadh Air Metropolitano",
-      tickets: "",
+      tickets:
+        "https://tienda.lolaindigomusic.com/pages/14-de-junio-2025-estadio-riyadh-air-metropolitano-madrid",
     },
     {
-      date: "21 de junio de 2025",
+      date: "21 junio 2025",
       city: "Sevilla",
       venue: "Estadio de la Cartuja",
       tickets:
         "https://tienda.lolaindigomusic.com/pages/21-de-junio-2025-estadio-de-la-cartuja-sevilla",
     },
     {
-      date: "12 de julio de 2025",
+      date: "12 julio 2025",
       city: "Barcelona",
       venue: "RCDE Stadium",
       tickets:
@@ -488,32 +536,32 @@ const data = {
   social_media_links: [
     {
       href: "https://www.instagram.com/lolaindigo/",
-      icon: "/icons/instagram-brands-solid.svg",
+      icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485979/instagram-brands-solid_pjwrsy.svg",
       icon_alt: "Instagram",
     },
     {
       href: "https://www.tiktok.com/@lolainditok",
-      icon: "/icons/tiktok-brands-solid.svg",
+      icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485979/tiktok-brands-solid_hjibvz.svg",
       icon_alt: "TikTok",
     },
     {
       href: "https://www.youtube.com/@lolaindigochannel",
-      icon: "/icons/youtube-brands-solid.svg",
+      icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485981/youtube-brands-solid_sy567s.svg",
       icon_alt: "Youtube",
     },
     {
       href: "https://music.apple.com/es/artist/lola-%C3%ADndigo/1408847364",
-      icon: "/icons/apple-brands-solid.svg",
+      icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485977/apple-brands-solid_asrax0.svg",
       icon_alt: "Apple Music",
     },
     {
       href: "https://open.spotify.com/intl-es/artist/3bvfu2KAve4lPHrhEFDZna?si=TEU2_fa9SRiIhYUHxCUd9w",
-      icon: "/icons/spotify-brands-solid.svg",
+      icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485979/spotify-brands-solid_bdcf1a.svg",
       icon_alt: "Spotify",
     },
     {
       href: "https://www.whatsapp.com/channel/0029VakyiLHATRSsUfaF9C3b",
-      icon: "/icons/whatsapp-brands-solid.svg",
+      icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485980/whatsapp-brands-solid_bx5jha.svg",
       icon_alt: "WhatsApp",
     },
   ],

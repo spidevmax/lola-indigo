@@ -11,66 +11,54 @@
 }
 
 .modal-content {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
+  padding: 20px;
+  gap: 20px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
-    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
-    rgb(255, 85, 85) 0px 0px 0px 15px;
   z-index: 10000;
+  color: var(--ghost-white);
 }
 
-.modal-content p {
-  color: black;
+.product-name {
+  width: 100%;
+  height: auto;
+  font-size: 20px;
+  color: var(--ghost-white);
+}
+
+.product-price {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.product-description {
+  text-align: center;
 }
 
 .modal-content select,
 .modal-content input {
-  margin-top: 10px;
-  padding: 8px;
-  font-size: 1em;
-  border-radius: 4px;
-  border: 1px solid #ccc;
   width: 100%;
+  height: 50px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: inherit;
 }
 
 .modal-content label {
-  font-size: 1em;
-  margin-top: 10px;
-  display: block;
-  color: #333;
-}
-
-.modal-content button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.1em;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s;
-}
-
-.modal-content button:hover {
-  background-color: #0056b3;
-}
-
-#close-modal {
-  background-color: #dc3545;
-}
-
-#close-modal:hover {
-  background-color: #c82333;
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
 
 .notification {
@@ -78,14 +66,14 @@
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #28a745; /* Verde */
+  background-color: #28a745;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1.2em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  animation: showNotification 3s forwards;
+  animation: showNotification 5s forwards;
 }
 
 @keyframes showNotification {
@@ -98,4 +86,12 @@
   100% {
     opacity: 0;
   }
+}
+
+.augborder-modal {
+  width: 100%;
+  height: 100%;
+  --aug-border-bg: url("https://i.pinimg.com/originals/bd/28/2d/bd282d3e832a0efd8cb3360c449b7fbd.gif");
+  --aug-inlay-bg: url("https://i.pinimg.com/736x/0e/4a/51/0e4a5185f3f700bbd46b2fc6566f5aa6.jpg");
+  --aug-inlay-opacity: 0.5;
 }

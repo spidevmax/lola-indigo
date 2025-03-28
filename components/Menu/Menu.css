@@ -84,7 +84,7 @@ div.hamburger > div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: var(--spacing);
 }
 
 .menuppal > ul > li {

@@ -1,4 +1,4 @@
-.contacto {
+.usuario {
   width: 100%;
   height: 100%;
   display: flex;
@@ -7,4 +7,5 @@
   align-items: center;
   padding: var(--spacing);
   gap: var(--spacing);
+  text-align: center;
 }

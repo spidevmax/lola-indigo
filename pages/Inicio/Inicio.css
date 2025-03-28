@@ -54,12 +54,24 @@
   font-family: var(--other-font);
 }
 
+.tour-name > h3:nth-child(1):hover {
+  color: blueviolet;
+}
+
+.tour-name > h3:nth-child(2):hover {
+  color: rgb(255, 13, 223);
+}
+
+.tour-name > h3:nth-child(3):hover {
+  color: green;
+}
+
 .tour-name > h3::after {
   content: "✮";
-  display: inline-block; /* Necesario para aplicar transformaciones */
-  margin-left: 5px; /* Espacio entre el texto y el ícono */
-  margin-right: 5px; /* Espacio entre el texto y el ícono */
-  animation: girar 2s linear infinite; /* Rotación infinita */
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  animation: girar 2s linear infinite;
 }
 
 @keyframes girar {

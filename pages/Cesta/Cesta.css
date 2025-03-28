@@ -1,0 +1,34 @@
+.cesta {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing);
+  gap: var(--spacing);
+}
+
+.cesta > ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--small-spacing);
+}
+
+.cesta > ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--small-spacing);
+  border: 2px solid black;
+  text-align: center;
+}
+
+.product-cover {
+  width: 50%;
+  height: auto;
+}

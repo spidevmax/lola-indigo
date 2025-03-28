@@ -1,26 +1,25 @@
 .btn {
-  font-family: var(--header-font);
+  font-family: var(--audiowide-font);
   color: var(--ghost-white);
-  font-size: 20px;
-  text-transform: uppercase;
   letter-spacing: 2px;
+  background-color: var(--red);
 }
 
 .btn:active {
-  transform: scale(0.95);
+  transform: translate(2px, 2px);
 }
 
 .btn.primary {
-  width: 150px;
-  height: 50px;
+  width: 200px;
+  height: 40px;
   border-radius: 10px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  transition: all 0.2s;
-  background-color: var(--red);
   box-shadow: 3px 3px black;
+  transition: all 0.2s;
 }
 
 .btn.primary:hover {
@@ -38,4 +37,13 @@
 .btn > img {
   width: 20px;
   height: 20px;
+}
+
+/*******************ID****************************/
+
+#close-modal {
+  background-color: var(--ghost-white);
+  width: auto;
+  height: auto;
+  border-radius: 50px;
 }

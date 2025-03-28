@@ -4,8 +4,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  gap: 20px;
+  padding: var(--spacing);
+  gap: var(--spacing);
   position: absolute;
   z-index: 100;
 }
@@ -16,13 +16,19 @@ header {
 }
 
 .icon:hover {
-  transform: rotate(40deg);
+  transform: rotate(80deg);
 }
 
-.buttons {
+.links-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: var(--spacing);
+}
+
+.links-header img {
+  width: 25px;
+  height: 25px;
 }
 
 .absolute-header {
@@ -34,5 +40,31 @@ header {
 }
 
 .background-header {
-  background-color: black;
+  background-color: var(--rich-black);
+}
+
+.cart-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-badge {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--red);
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+#soundBtn > img {
+  width: 25px;
+  height: 25px;
 }

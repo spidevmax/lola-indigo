@@ -8,7 +8,7 @@
   text-align: center;
   line-height: 1;
   z-index: 1;
-  font-family: var(--header-font);
+  font-family: var(--audiowide-font);
 }
 
 .chip.red {

@@ -6,30 +6,29 @@ import { Videos } from "../pages/Videos/Videos";
 import { Gira } from "../pages/Gira/Gira";
 import { Tienda } from "../pages/Tienda/Tienda";
 import { Contacto } from "../pages/Contacto/Contacto";
+import { Cesta } from "../pages/Cesta/Cesta";
+import { Usuario } from "../pages/Usuario/Usuario";
 import { NoEncontrada } from "../pages/NoEncontrada/NoEncontrada";
 import { updateHeaderClass } from "./updateHeaderClass";
 import { setupHamburgerMenu } from "./setupHamburgerMenu";
-import data from "../data/data";
+import { updateCart } from "../utils/cart";
+import { initCanvas } from "../utils/renderCanvas.js";
+import { controlAudio } from "./controlAudio.js";
 
-const { product_links } = data;
+const routes = {
+  "/": Inicio,
+  "/musica": Musica,
+  "/videos": Videos,
+  "/gira": Gira,
+  "/tienda": Tienda,
+  "/contacto": Contacto,
+  "/cesta": Cesta,
+  "/usuario": Usuario,
+};
 
-// Definimos las rutas
-const routes = [
-  { path: "/", page: Inicio },
-  { path: "/musica", page: Musica },
-  { path: "/videos", page: Videos },
-  { path: "/gira", page: Gira },
-  { path: "/tienda", page: Tienda },
-  { path: "/contacto", page: Contacto },
-  { path: "*", page: NoEncontrada },
-];
-
-/**
- * Renderiza la página correspondiente según la ruta actual.
- */
 export const router = () => {
   const path = window.location.pathname;
-  const route = routes.find((r) => r.path === path) || { page: NoEncontrada };
+  const page = routes[path] || NoEncontrada;
 
   const app = document.querySelector("#app");
   if (!app) {
@@ -37,15 +36,35 @@ export const router = () => {
     return;
   }
 
-  // Renderiza la página, sin footer si es la página de inicio
   app.innerHTML = `
     ${Header()}
-    <main>${route.page()}</main>
+    <main>${page()}</main>
     ${path !== "/" ? Footer() : ""}
   `;
 
-  updateHeaderClass(); // Actualiza la clase del header
-  setupHamburgerMenu(); // Reasigna el evento del menú hamburguesa
+  updateHeaderClass(); 
+  setupHamburgerMenu();
+  updateCart();
+  updateActiveNav();
+
+  if (path === "/") {
+    controlAudio();
+  } else {
+    const button = document.getElementById("soundBtn");
+    button.style.display = "none";
+  }
+
+  if (path === "/usuario") {
+    import("../utils/auth.js")
+      .then((module) => {
+        module.initAuth(); 
+      })
+      .catch((err) => console.error("Error al cargar auth.js", err));
+  }
+
+  if (NoEncontrada) {
+    initCanvas();
+  }
 };
 
 /**
@@ -54,6 +73,7 @@ export const router = () => {
 export const navListeners = () => {
   document.body.addEventListener("click", (ev) => {
     const link = ev.target.closest("a");
+
     if (
       !link ||
       link.target === "_blank" ||
@@ -65,7 +85,6 @@ export const navListeners = () => {
     ev.preventDefault();
     history.pushState(null, "", link.pathname);
     router();
-    updateActiveNav(link);
   });
 
   window.addEventListener("popstate", router);
@@ -74,9 +93,9 @@ export const navListeners = () => {
 /**
  * Resalta el enlace activo en la navegación.
  */
-const updateActiveNav = (activeLink) => {
-  document
-    .querySelectorAll("nav a")
-    .forEach((el) => el.classList.remove("active"));
-  activeLink.classList.add("active");
+const updateActiveNav = () => {
+  const path = window.location.pathname;
+  document.querySelectorAll("nav a").forEach((el) => {
+    el.classList.toggle("active", el.pathname === path);
+  });
 };

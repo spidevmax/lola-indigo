@@ -1,6 +1,6 @@
 import "./Button.css";
 
-const Button = (content, variant = "primary", isImage = false) => {
+const Button = (content, variant, isImage, id) => {
   const button = document.createElement("button");
   if (isImage) {
     const img = document.createElement("img");
@@ -10,6 +10,7 @@ const Button = (content, variant = "primary", isImage = false) => {
     button.innerText = content;
   }
   button.className = `btn ${variant}`;
+  button.id = `${id}`;
   return button.outerHTML;
 };
 
