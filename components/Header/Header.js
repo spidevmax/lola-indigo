@@ -12,7 +12,7 @@ const Header = () => {
       <a href="/"><img class="icon" src="${icon}" alt="${icon_alt}" /></a>
       <ul class="links-header">
         <li>
-          ${Button("https://res.cloudinary.com/darvwfw0u/image/upload/v1743099613/volume-xmark-solid_y0g0xv.svg", "secondary", true, "soundBtn")}
+          ${Button("https://res.cloudinary.com/darvwfw0u/image/upload/v1743099613/volume-xmark-solid_y0g0xv.svg", "secondary", true, "sound-button")}
         </li>
         <li>
           <a href="/cesta" class="cart-container">

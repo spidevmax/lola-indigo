@@ -11,9 +11,10 @@ import { Usuario } from "../pages/Usuario/Usuario";
 import { NoEncontrada } from "../pages/NoEncontrada/NoEncontrada";
 import { updateHeaderClass } from "./updateHeaderClass";
 import { setupHamburgerMenu } from "./setupHamburgerMenu";
-import { updateCart } from "../utils/cart";
-import { initCanvas } from "../utils/renderCanvas.js";
+import { updateCart } from "./cart";
+import { initCanvas } from "./renderCanvas.js";
 import { controlAudio } from "./controlAudio.js";
+import { initAuth } from "./auth.js";
 
 const routes = {
   "/": Inicio,
@@ -31,10 +32,6 @@ export const router = () => {
   const page = routes[path] || NoEncontrada;
 
   const app = document.querySelector("#app");
-  if (!app) {
-    console.error("No se encontró el elemento #app.");
-    return;
-  }
 
   app.innerHTML = `
     ${Header()}
@@ -42,7 +39,7 @@ export const router = () => {
     ${path !== "/" ? Footer() : ""}
   `;
 
-  updateHeaderClass(); 
+  updateHeaderClass();
   setupHamburgerMenu();
   updateCart();
   updateActiveNav();
@@ -50,16 +47,12 @@ export const router = () => {
   if (path === "/") {
     controlAudio();
   } else {
-    const button = document.getElementById("soundBtn");
+    const button = document.getElementById("sound-button");
     button.style.display = "none";
   }
 
   if (path === "/usuario") {
-    import("../utils/auth.js")
-      .then((module) => {
-        module.initAuth(); 
-      })
-      .catch((err) => console.error("Error al cargar auth.js", err));
+    initAuth();
   }
 
   if (NoEncontrada) {
@@ -67,9 +60,6 @@ export const router = () => {
   }
 };
 
-/**
- * Maneja la navegación sin recarga.
- */
 export const navListeners = () => {
   document.body.addEventListener("click", (ev) => {
     const link = ev.target.closest("a");
@@ -90,9 +80,6 @@ export const navListeners = () => {
   window.addEventListener("popstate", router);
 };
 
-/**
- * Resalta el enlace activo en la navegación.
- */
 const updateActiveNav = () => {
   const path = window.location.pathname;
   document.querySelectorAll("nav a").forEach((el) => {
