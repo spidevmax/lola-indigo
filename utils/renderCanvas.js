@@ -1,10 +1,10 @@
 export const initCanvas = () => {
   const canvas = document.getElementById("errorCanvas");
-  // Si no hay un canvas en la página actual, no hacer nada
+
   if (!canvas) return;
+
   const ctx = canvas.getContext("2d");
 
-  // Ajustar tamaño del canvas
   const resizeCanvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
