@@ -93,6 +93,14 @@ const data = {
   ],
   videos: [
     {
+      href: "https://youtu.be/SHOYtsAvux4?si=Ksmk1LSz5oB3586x",
+      title: "SIN AUTOTUNE",
+      cover:
+        "https://res.cloudinary.com/darvwfw0u/image/upload/v1743286267/sin-autotune_ekgh3l.jpg",
+      album: "Nave Dragón",
+      year: "2025",
+    },
+    {
       href: "https://youtu.be/HGvUZh3JAoM?feature=shared",
       title: "LA REINA (REMIX)",
       cover:

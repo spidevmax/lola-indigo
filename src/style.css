@@ -144,7 +144,8 @@ form {
   gap: var(--spacing);
 }
 
-form > input {
+form > input,
+textarea {
   width: 100%;
   height: 50px;
   border: 2px solid var(--rich-black);
@@ -154,13 +155,13 @@ form > input {
   font-family: inherit;
 }
 
-.underlined-link {
-  color: var(--rich-black);
-  text-decoration: underline;
+textarea {
+  height: 200px;
 }
 
 @media screen and (min-width: 768px) {
-  form > input {
+  form > input,
+  textarea {
     width: 50%;
   }
 }

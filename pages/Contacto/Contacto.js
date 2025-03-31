@@ -13,7 +13,7 @@ export const Contacto = () => {
         <label for="subject">Asunto:</label>
         <input type="text" id="subject" name="subject" placeholder="Ingresa un asunto" autocomplete="on" required/>
         <label for="message">Mensaje:</label>
-        <textarea id="message" name="message" placeholder="Ingresa un mensaje" rows="8" cols="35" required></textarea>
+        <textarea id="message" name="message" placeholder="Ingresa un mensaje" required></textarea>
         ${Button("Enviar", "primary", false, "send-form")}
       </form>
     </section>

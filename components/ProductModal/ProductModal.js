@@ -103,7 +103,7 @@ const openModal = (product) => {
     // Mostrar la notificación de éxito
     const notification = document.createElement("div");
     notification.classList.add("notification");
-    notification.innerText = `Producto ${product.name} añadido al carrito`;
+    notification.innerText = `${product.name} añadido al carrito`;
     document.body.appendChild(notification);
     setTimeout(() => {
       notification.remove();

@@ -17,14 +17,19 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--ghost-white);
   border-radius: 15px;
-  padding: 20px;
-  gap: 10px;
+  padding: var(--spacing);
+  gap: var(--small-spacing);
   position: absolute;
   bottom: 5%;
-  border: 5px solid black;
-  outline: 5px double white;
+  border: 5px solid var(--rich-black);
+  outline: 5px double var(--ghost-white);
+}
+
+.info:hover {
+  animation: bounce;
+  animation-duration: 1s; 
 }
 
 .marker {
@@ -51,7 +56,7 @@
 
 .tour-name > h3 {
   font-size: 0.9rem;
-  font-family: var(--other-font);
+  font-family: var(--cubenzis-font);
 }
 
 .tour-name > h3:nth-child(1):hover {
