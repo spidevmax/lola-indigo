@@ -41,20 +41,6 @@ Este proyecto es una página web dedicada a la artista Lola Índigo, desarrollad
    ```
 5. Abrir en el navegador la URL proporcionada por Vite.
 
-## Estructura del Proyecto
-
-```
-proyecto-lola-indigo/
-│── public/         # Archivos estáticos
-│── src/
-│   ├── components/ # Componentes reutilizables
-│   ├── styles/     # Estilos CSS
-│   ├── main.js     # Punto de entrada de la aplicación
-│── index.html      # Archivo principal HTML
-│── package.json    # Configuración de dependencias
-│── vite.config.js  # Configuración de Vite
-```
-
 ## Licencia
 
 Este proyecto se encuentra bajo la licencia MIT.
