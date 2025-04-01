@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/usuario";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const initAuth = () => {
   const registerForm = document.querySelector("#register-form");
