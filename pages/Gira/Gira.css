@@ -40,3 +40,10 @@
   background: url("https://res.cloudinary.com/darvwfw0u/image/upload/v1743521590/augborder-tour-bg_jwfijc.jpg");
   color: var(--ghost-white);
 }
+
+@media screen and (min-width: 1620px) {
+  .gira {
+    min-height: 75vh;
+    justify-content: flex-start;
+  }
+}

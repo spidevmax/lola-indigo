@@ -10,7 +10,7 @@ export const saveCart = (cart) => {
 
 // Función para agregar un producto al carrito. Si el producto ya existe, incrementa la cantidad.
 export const addToCart = (product) => {
-  let cart = getCart(); // Obtenemos el carrito actual
+  let cart = getCart();
 
   // Verificamos si el producto ya está en el carrito
   const existingProductIndex = cart.findIndex(
@@ -25,9 +25,8 @@ export const addToCart = (product) => {
     cart.push({ ...product, quantity: product.quantity });
   }
 
-  // Guardamos el carrito actualizado en el localStorage
   saveCart(cart);
-  updateCart(); // Actualizamos el badge al agregar productos
+  updateCart();
 };
 
 // Función para actualizar la cantidad de productos en el carrito.

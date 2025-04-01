@@ -30,9 +30,9 @@ export const initCanvas = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = errorMessage.color;
     ctx.fillText(errorMessage.text, errorMessage.x, errorMessage.y);
-    // Esperar a que la fuente esté lista
-    document.fonts.load("50px Cubenzis").then(() => {
-      ctx.font = "italic bold 50px Cubenzis";
+    
+    document.fonts.load("40px Cubenzis").then(() => {
+      ctx.font = "italic bold 40px Cubenzis";
       ctx.shadowColor = "rgb(0, 0, 0)";
       ctx.shadowOffsetX = 5;
       ctx.shadowOffsetY = 5;
@@ -43,8 +43,10 @@ export const initCanvas = () => {
     errorMessage.x += errorMessage.dx;
     errorMessage.y += errorMessage.dy;
 
-    // Rebote en los bordes
-    if (errorMessage.x + 100 >= canvas.width || errorMessage.x <= 0) {
+    const textWidth = ctx.measureText(errorMessage.text).width;
+
+    // Rebote en los bordes teniendo en cuenta el ancho del texto
+    if (errorMessage.x + textWidth >= canvas.width || errorMessage.x <= 0) {
       errorMessage.dx *= -1;
       errorMessage.color = getRandomColor();
     }

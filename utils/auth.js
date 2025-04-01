@@ -1,4 +1,4 @@
-const API_URL = process.env.API_URL || "http://localhost:3000/usuario";
+const API_URL = "http://localhost:3000/usuario";
 
 export const initAuth = () => {
   const registerForm = document.querySelector("#register-form");
@@ -7,6 +7,7 @@ export const initAuth = () => {
   const logoutBtn = document.querySelector("#logout-button");
   const registerBtn = document.querySelector("#register-button");
   const logintBtn = document.querySelector("#login-button");
+  const userSection = document.querySelector(".usuario");
 
   if (
     !registerForm ||
@@ -92,11 +93,13 @@ export const initAuth = () => {
       loginForm.style.display = "none";
       registerForm.style.display = "none";
       logoutBtn.style.display = "block";
+      userSection.classList.add("logged-user");
     } else {
       result.innerHTML = "";
       loginForm.style.display = "flex";
       registerForm.style.display = "flex";
       logoutBtn.style.display = "none";
+      userSection.classList.remove("logged-user");
     }
   };
 

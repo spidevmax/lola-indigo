@@ -1,6 +1,6 @@
 export const controlAudio = () => {
   const button = document.getElementById("sound-button");
-  const buttonImg = button.querySelector("img"); // Obtener la imagen dentro del botón
+  const buttonImg = button.querySelector("img");
   const videoMobile = document.getElementById("video-mobile");
   const videoDesktop = document.getElementById("video-desktop");
 

@@ -10,6 +10,10 @@
   text-align: center;
 }
 
+.logged-user{
+  height: 75vh;
+}
+
 #register-form, #login-form {
   border: 2px dashed var(--red);
   border-radius: 10px;
