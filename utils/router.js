@@ -15,6 +15,7 @@ import { updateCart } from "./cart";
 import { initCanvas } from "./renderCanvas.js";
 import { controlAudio } from "./controlAudio.js";
 import { initAuth } from "./auth.js";
+import { updateDateTime } from "./updateDateTime.js";
 
 const routes = {
   "/": Inicio,
@@ -43,6 +44,7 @@ export const router = () => {
   setupHamburgerMenu();
   updateCart();
   updateActiveNav();
+  updateDateTime();
 
   if (path === "/") {
     controlAudio();

@@ -1,21 +1,14 @@
-/**
- * Función para obtener el carrito de compras desde el localStorage.
- */
+// Función para obtener el carrito de compras desde el localStorage.
 export const getCart = () => {
   return JSON.parse(localStorage.getItem("cart")) || [];
 };
 
-/**
- * Función para guardar el carrito en el localStorage.
- */
+// Función para guardar el carrito en el localStorage.
 export const saveCart = (cart) => {
   localStorage.setItem("cart", JSON.stringify(cart));
 };
 
-/**
- * Función para agregar un producto al carrito.
- * Si el producto ya existe, incrementa la cantidad.
- */
+// Función para agregar un producto al carrito. Si el producto ya existe, incrementa la cantidad.
 export const addToCart = (product) => {
   let cart = getCart(); // Obtenemos el carrito actual
 
@@ -37,9 +30,7 @@ export const addToCart = (product) => {
   updateCart(); // Actualizamos el badge al agregar productos
 };
 
-/**
- * Función para actualizar la cantidad de productos en el carrito.
- */
+// Función para actualizar la cantidad de productos en el carrito.
 export const updateCart = () => {
   const cart = getCart();
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);

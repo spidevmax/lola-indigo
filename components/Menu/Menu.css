@@ -1,53 +1,39 @@
 .hamburger {
   width: 50px;
   height: 50px;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform 0.25s
-    cubic-bezier(0.05, 1.04, 0.72, 0.98);
-  transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-  z-index: 5;
-  cursor: pointer;
-  background-color: white;
-  border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  background-color: var(--ghost-white);
+  border-radius: 50%;
+  transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  z-index: 5;
 }
 
-div.hamburger > div {
+.hamburger > div {
+  width: 25px;
+  height: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--red);
   margin-bottom: 4px;
   border-radius: 3px;
-  width: 25px;
-  height: 4px;
-  opacity: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
   transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
 }
 
 .hamburger:hover .top {
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
+  transform: translateY(-50%);
 }
 
 .hamburger:hover .bottom {
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(100%);
+  transform: translateY(50%);
 }
 
 .hamburger.is-active .top {
-  -webkit-transform: translateY(200%) rotate(45deg);
-  -ms-transform: translateY(200%) rotate(45deg);
   transform: translateY(200%) rotate(45deg);
 }
 
@@ -56,8 +42,6 @@ div.hamburger > div {
 }
 
 .hamburger.is-active .bottom {
-  -webkit-transform: translateY(-200%) rotate(135deg);
-  -ms-transform: translateY(-200%) rotate(135deg);
   transform: translateY(-200%) rotate(135deg);
 }
 

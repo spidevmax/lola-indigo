@@ -48,6 +48,10 @@ header {
   display: inline-block;
 }
 
+.cart-container:hover {
+  color: inherit;
+}
+
 .cart-badge {
   width: 20px;
   height: 20px;
@@ -59,8 +63,8 @@ header {
   font-weight: bold;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   visibility: hidden;
 }
 

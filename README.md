@@ -8,6 +8,8 @@ Este proyecto es una página web dedicada a la artista Lola Índigo, desarrollad
 - **CSS3**: Para los estilos y diseño responsivo.
 - **JavaScript (ES6+)**: Para la interactividad y dinamismo.
 - **Vite**: Para la configuración del entorno de desarrollo y optimización.
+- **augmented-ui**: Librería CSS para el estilo de los componentes modales.
+- **Animate.css**: Librería CSS para las animaciones de elementos.
 
 ## Características
 
@@ -15,16 +17,19 @@ Este proyecto es una página web dedicada a la artista Lola Índigo, desarrollad
 - **Diseño Responsivo**: Adaptado para distintos dispositivos.
 - **Carga Rápida**: Gracias a la optimización de Vite.
 - **Animaciones y Efectos**: Uso de CSS y JavaScript para mejorar la experiencia de usuario.
+- **Autenticación falsa con JSON Server**: Se utiliza [JSON Server](https://github.com/typicode/json-server) como backend simulado para gestionar usuarios y autenticación. Los datos de los usuarios se almacenan en un archivo JSON, permitiendo realizar peticiones como login y registro sin necesidad de un servidor real.  
+- **SPA (Single Page Application) con cambio de rutas sin recarga**: La aplicación utiliza un enrutador de frontend para gestionar la navegación entre páginas sin recargar la aplicación. Esto permite una experiencia más fluida y rápida para el usuario.  
+
 
 ## Instalación y Uso
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/usuario/proyecto-lola-indigo.git
+   git clone https://github.com/marinalsz/lola-indigo.git
    ```
 2. Acceder al directorio del proyecto:
    ```bash
-   cd proyecto-lola-indigo
+   cd lola-indigo
    ```
 3. Instalar las dependencias:
    ```bash
@@ -49,15 +54,6 @@ proyecto-lola-indigo/
 │── package.json    # Configuración de dependencias
 │── vite.config.js  # Configuración de Vite
 ```
-
-## Contribución
-
-Si deseas contribuir, por favor sigue estos pasos:
-1. Haz un fork del repositorio.
-2. Crea una rama con tu función o mejora: `git checkout -b feature-nueva`.
-3. Realiza los cambios y haz un commit: `git commit -m 'Agregado nueva funcionalidad'`.
-4. Sube los cambios a tu repositorio: `git push origin feature-nueva`.
-5. Crea un Pull Request.
 
 ## Licencia
 

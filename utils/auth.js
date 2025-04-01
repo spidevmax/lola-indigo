@@ -1,24 +1,28 @@
-// Base URL del JSON Server
-const API_URL = "http://localhost:3000/usuario";
+const API_URL = process.env.API_URL || "http://localhost:3000/usuario";
 
-// Función de inicialización (se ejecuta cuando se carga la página de usuario)
-export function initAuth() {
-  // Recuperamos los elementos del DOM
-  const registerForm = document.querySelector("#registerForm");
-  const loginForm = document.querySelector("#loginForm");
+export const initAuth = () => {
+  const registerForm = document.querySelector("#register-form");
+  const loginForm = document.querySelector("#login-form");
   const result = document.querySelector("#result");
-  const logoutBtn = document.querySelector("#logoutBtn");
+  const logoutBtn = document.querySelector("#logout-button");
+  const registerBtn = document.querySelector("#register-button");
+  const logintBtn = document.querySelector("#login-button");
 
-  if (!registerForm || !loginForm || !result || !logoutBtn) {
-    console.error("No se encontraron los elementos necesarios en el DOM.");
+  if (
+    !registerForm ||
+    !loginForm ||
+    !result ||
+    !logoutBtn ||
+    !registerBtn ||
+    !logintBtn
+  ) {
     return;
   }
 
-  // Función para registrar un nuevo usuario
-  async function registerUser(ev) {
+  const registerUser = async (ev) => {
     ev.preventDefault();
-    const username = document.querySelector("#usernameInput").value.trim();
-    const password = document.querySelector("#passwordInput").value.trim();
+    const username = document.querySelector("#username-input").value.trim();
+    const password = document.querySelector("#password-input").value.trim();
 
     if (!username || !password) {
       alert("Completa los campos, por favor");
@@ -46,13 +50,16 @@ export function initAuth() {
     } catch (error) {
       console.error("Error registrando usuario", error);
     }
-  }
+  };
 
-  // Función para manejar el login
-  async function loginUser(ev) {
+  const loginUser = async (ev) => {
     ev.preventDefault();
-    const username = document.querySelector("#usernameInputLogin").value.trim();
-    const password = document.querySelector("#passwordInputLogin").value.trim();
+    const username = document
+      .querySelector("#username-input-login")
+      .value.trim();
+    const password = document
+      .querySelector("#password-input-login")
+      .value.trim();
 
     try {
       const res = await fetch(API_URL);
@@ -71,17 +78,15 @@ export function initAuth() {
     } catch (error) {
       console.error("Error en el login", error);
     }
-  }
+  };
 
-  // Función para cerrar sesión
-  function logoutUser() {
+  const logoutUser = () => {
     localStorage.removeItem("user");
     alert("Usuario desconectado");
     updateUI(null);
-  }
+  };
 
-  // Función para actualizar la UI según el estado del usuario
-  function updateUI(user) {
+  const updateUI = (user) => {
     if (user) {
       result.innerHTML = `Bienvenidx, ${user.username}`;
       loginForm.style.display = "none";
@@ -89,18 +94,16 @@ export function initAuth() {
       logoutBtn.style.display = "block";
     } else {
       result.innerHTML = "";
-      loginForm.style.display = "block";
-      registerForm.style.display = "block";
+      loginForm.style.display = "flex";
+      registerForm.style.display = "flex";
       logoutBtn.style.display = "none";
     }
-  }
+  };
 
-  // Agregar event listeners
-  registerForm.addEventListener("submit", registerUser);
-  loginForm.addEventListener("submit", loginUser);
   logoutBtn.addEventListener("click", logoutUser);
+  registerBtn.addEventListener("click", registerUser);
+  logintBtn.addEventListener("click", loginUser);
 
-  // Verificar usuario al cargar la página
   const savedUser = JSON.parse(localStorage.getItem("user"));
   updateUI(savedUser);
-}
+};

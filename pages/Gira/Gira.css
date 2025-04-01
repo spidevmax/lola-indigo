@@ -34,9 +34,9 @@
 }
 
 .augborder-tour {
-  --aug-border-bg: url("https://i.pinimg.com/originals/1b/7b/9a/1b7b9a3d73ff0529151f53148bd6836b.gif");
+  --aug-border-bg: url("https://res.cloudinary.com/darvwfw0u/image/upload/v1743521665/aug-border-tour-bg_eqfrnq.gif");
   --aug-border-opacity: 1;
   --aug-border-all: 6px;
-  background: url("https://i.pinimg.com/736x/20/4b/83/204b833e5cbed704e119c371311dc285.jpg");
-  color: white;
+  background: url("https://res.cloudinary.com/darvwfw0u/image/upload/v1743521590/augborder-tour-bg_jwfijc.jpg");
+  color: var(--ghost-white);
 }

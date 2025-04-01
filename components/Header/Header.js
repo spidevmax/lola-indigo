@@ -12,17 +12,22 @@ const Header = () => {
       <a href="/"><img class="icon" src="${icon}" alt="${icon_alt}" /></a>
       <ul class="links-header">
         <li>
-          ${Button("https://res.cloudinary.com/darvwfw0u/image/upload/v1743099613/volume-xmark-solid_y0g0xv.svg", "secondary", true, "sound-button")}
+          ${Button(
+            "https://res.cloudinary.com/darvwfw0u/image/upload/v1743099613/volume-xmark-solid_y0g0xv.svg",
+            "secondary",
+            true,
+            "sound-button"
+          )}
         </li>
         <li>
           <a href="/cesta" class="cart-container">
-            <img src="https://res.cloudinary.com/darvwfw0u/image/upload/v1742994292/cart-shopping-solid-white_fpkbvq.svg" alt="Icono carrito" />
-            <span class="cart-badge">0</span>
+            <img src="https://res.cloudinary.com/darvwfw0u/image/upload/v1742994292/cart-shopping-solid-white_fpkbvq.svg" alt="Icono de carrito" />
+            <span class="cart-badge"></span>
           </a>
         </li>
         <li>
           <a href="/usuario" class="user-container">
-            <img src="https://res.cloudinary.com/darvwfw0u/image/upload/v1742485980/user-solid_knclj9.svg" alt="Icono usuario" />
+            <img src="https://res.cloudinary.com/darvwfw0u/image/upload/v1742485980/user-solid_knclj9.svg" alt="Icono de usuario" />
           </a> 
         </li>
       </ul>

@@ -39,13 +39,13 @@ const openModal = (product) => {
         <h3 class="product-name">${product.name}</h3>
         <p class="product-price">${product.price} €</p>
         <p class="product-description">${product.description}</p>
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" min="1" value="1" />
+        <label for="quantity">Cantidad:</label>
+        <input type="number" id="quantity" min="1" value="1" />
         ${
           product.category && product.category.toLowerCase() === "moda"
             ? `
-          <label for="talla">Talla:</label>
-          <select id="talla">
+          <label for="size">Talla:</label>
+          <select id="size">
             ${product.sizes
               .map(
                 (size) => `
@@ -63,15 +63,15 @@ const openModal = (product) => {
   `;
 
   // Añadir el modal al .store-container
-  const tienda = document.querySelector(".store-container");
-  tienda.appendChild(modal);
+  const store = document.querySelector(".store-container");
+  store.appendChild(modal);
 
   // Evento para cerrar el modal
   document
     .getElementById("close-modal")
     .addEventListener("click", () => modal.remove());
 
-  // Cerrar el modal si el usuario hace clic fuera de la ventana del modal
+  // Cerrar el modal si el usuario hace click fuera de la ventana del modal
   modal.addEventListener("click", (event) => {
     if (event.target === modal) {
       modal.remove();
@@ -80,34 +80,32 @@ const openModal = (product) => {
 
   // Evento para agregar el producto al carrito
   document.getElementById("buy-button").addEventListener("click", () => {
-    const quantity = parseInt(document.getElementById("cantidad").value);
+    const quantity = parseInt(document.getElementById("quantity").value);
     const size =
       product.category.toLowerCase() === "moda"
-        ? document.getElementById("talla").value
+        ? document.getElementById("size").value
         : null;
 
     // Crear un objeto con la información del producto para agregar al carrito
     const productToAdd = {
-      cover: product.cover,
       name: product.name,
-      price: parseFloat(product.price), // Aseguramos que el precio es un número
+      price: parseFloat(product.price),
       category: product.category,
-      description: product.description,
       quantity: quantity,
-      size: size || "", // Si no es un producto de moda, la talla estará vacía
+      size: size || "",
     };
 
-    // Añadir el producto al carrito utilizando la función addToCart
+    // Añadir el producto al carrito
     addToCart(productToAdd);
 
     // Mostrar la notificación de éxito
     const notification = document.createElement("div");
     notification.classList.add("notification");
     notification.innerText = `${product.name} añadido al carrito`;
-    document.body.appendChild(notification);
+    store.appendChild(notification);
     setTimeout(() => {
       notification.remove();
-    }, 3000);
+    }, 5000);
 
     // Cerrar el modal después de añadir al carrito
     modal.remove();

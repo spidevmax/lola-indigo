@@ -12,18 +12,18 @@
 .btn.primary {
   width: 200px;
   height: 40px;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: var(--border-radius);
+  padding: var(--small-spacing);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   box-shadow: 3px 3px black;
-  transition: all 0.2s;
+  transition: all 0.5s ease-in-out;
 }
 
 .btn.primary:hover {
-  background: white;
+  background-color: var(--ghost-white);
   color: var(--red);
 }
 
@@ -38,8 +38,6 @@
   width: 20px;
   height: 20px;
 }
-
-/*******************ID****************************/
 
 #close-modal {
   background-color: var(--ghost-white);

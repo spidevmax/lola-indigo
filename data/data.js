@@ -97,7 +97,7 @@ const data = {
       title: "SIN AUTOTUNE",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1743286267/sin-autotune_ekgh3l.jpg",
-      album: "Nave Dragón",
+      album: "NAVE DRAGÓN",
       year: "2025",
     },
     {
@@ -105,7 +105,7 @@ const data = {
       title: "LA REINA (REMIX)",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1740155088/la-reina-remix_xeqxgn.jpg",
-      album: "Nave Dragón",
+      album: "NAVE DRAGÓN",
       year: "2025",
     },
     {
@@ -113,7 +113,7 @@ const data = {
       title: "PERREITO PA LLORAR",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1740155089/perreito-pa-llorar_hijcup.jpg",
-      album: "Nave Dragón",
+      album: "NAVE DRAGÓN",
       year: "2024",
     },
     {
@@ -121,7 +121,7 @@ const data = {
       title: "PESADILLAS",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1740155091/pesadillas_wabt2k.jpg",
-      album: "Nave Dragón",
+      album: "NAVE DRAGÓN",
       year: "2024",
     },
     {
@@ -129,7 +129,7 @@ const data = {
       title: "LA REINA",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1740155088/la-reina_ygh9u6.jpg",
-      album: "Nave Dragón",
+      album: "NAVE DRAGÓN",
       year: "2024",
     },
     {
@@ -137,7 +137,7 @@ const data = {
       title: "1000COSAS",
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1740155085/1000-cosas_i2icks.jpg",
-      album: "Nave Dragón",
+      album: "NAVE DRAGÓN",
       year: "2024",
     },
     {
@@ -374,7 +374,7 @@ const data = {
       price: "30,00",
       category: "Moda",
       description:
-        "Camiseta exclusiva conmemorativa de Akelarre de Lola Índigo. Incluye un diseño fotográfico exclusivo de esta era en la parte delantera y logotipo de Akelarre en la parte trasera.",
+        "Camiseta exclusiva conmemorativa de Akelarre de Lola Índigo. Incluye un diseño fotográfico de esta era en la parte delantera y logotipo de Akelarre en la parte trasera.",
       sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     },
     {
@@ -511,7 +511,7 @@ const data = {
     {
       cover:
         "https://res.cloudinary.com/darvwfw0u/image/upload/v1741106263/llavero_grvog0.webp",
-      name: "LLavero Lola Índigo",
+      name: "Llavero Lola Índigo",
       price: "6,99",
       category: "Accesorios",
       description:
@@ -545,32 +545,32 @@ const data = {
     {
       href: "https://www.instagram.com/lolaindigo/",
       icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485979/instagram-brands-solid_pjwrsy.svg",
-      icon_alt: "Instagram",
+      icon_alt: "Icono de Instagram",
     },
     {
       href: "https://www.tiktok.com/@lolainditok",
       icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485979/tiktok-brands-solid_hjibvz.svg",
-      icon_alt: "TikTok",
+      icon_alt: "Icono de TikTok",
     },
     {
       href: "https://www.youtube.com/@lolaindigochannel",
       icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485981/youtube-brands-solid_sy567s.svg",
-      icon_alt: "Youtube",
+      icon_alt: "Icono de Youtube",
     },
     {
       href: "https://music.apple.com/es/artist/lola-%C3%ADndigo/1408847364",
       icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485977/apple-brands-solid_asrax0.svg",
-      icon_alt: "Apple Music",
+      icon_alt: "Icono de Apple Music",
     },
     {
       href: "https://open.spotify.com/intl-es/artist/3bvfu2KAve4lPHrhEFDZna?si=TEU2_fa9SRiIhYUHxCUd9w",
       icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485979/spotify-brands-solid_bdcf1a.svg",
-      icon_alt: "Spotify",
+      icon_alt: "Icono de Spotify",
     },
     {
       href: "https://www.whatsapp.com/channel/0029VakyiLHATRSsUfaF9C3b",
       icon: "https://res.cloudinary.com/darvwfw0u/image/upload/v1742485980/whatsapp-brands-solid_bx5jha.svg",
-      icon_alt: "WhatsApp",
+      icon_alt: "Icono de WhatsApp",
     },
   ],
   legal_links: [

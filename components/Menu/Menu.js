@@ -1,7 +1,8 @@
 import "./Menu.css";
 import Footer from "../Footer/Footer";
 
-const Menu = () => `
+const Menu = () =>
+  `
     <div class='hamburger'>
       <div class="top"></div>
       <div class="mid"></div>

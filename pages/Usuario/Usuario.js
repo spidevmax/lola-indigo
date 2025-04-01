@@ -5,22 +5,23 @@ export const Usuario = () => {
   return `
     <section class="usuario">
         <h2>Usuario</h2>
-
-        <form id="registerForm">
-            <label for="usernameInput">Registrarse</label>
-            <input type="text" id="usernameInput" placeholder="Nombre usuario" required />
-            <input type="password" id="passwordInput" placeholder="Contraseña" required />
-            <input type="submit" value="Register" />
+        <form id="register-form">
+            <h3>Registro</h3>
+            <label for="username-input">Nombre usuario:</label>
+            <input type="text" id="username-input" placeholder="Escribe un nombre de usuario" required />
+            <label for="password-input">Contraseña:</label>
+            <input type="password" id="password-input" placeholder="Escribe una contraseña" required />
+            ${Button("Registrarse", "primary", false, "register-button")}
         </form>
-
-        <form id="loginForm">
-            <label for="usernameInputLogin">Iniciar sesión</label>
-            <input type="text" id="usernameInputLogin" placeholder="Nombre usuario" required />
-            <input type="password" id="passwordInputLogin" placeholder="Contraseña" required/>
-            <input type="submit" value="Login" />
+        <form id="login-form">
+            <h3>Inicio de sesión</h3>
+            <label for="username-input-login">Nombre usuario:</label>
+            <input type="text" id="username-input-login" placeholder="Escribe tu nombre de usuario" required />
+            <label for="password-input-login">Contraseña:</label>
+            <input type="password" id="password-input-login" placeholder="Escribe tu contraseña" required/>
+            ${Button("Iniciar sesión", "primary", false, "login-button")}
         </form>
-
         <h3 id="result"></h3>
-        ${Button("Cerrar sesión", "primary", false, "logoutBtn")}
+        ${Button("Cerrar sesión", "primary", false, "logout-button")}
     </section>`;
 };

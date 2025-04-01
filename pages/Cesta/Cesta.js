@@ -1,7 +1,7 @@
 import { updateCart } from "../../utils/cart";
+import { updateDateTime } from "../../utils/updateDateTime";
 import "./Cesta.css";
 import Button from "/components/Button/Button";
-
 export const Cesta = () => {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -15,6 +15,12 @@ export const Cesta = () => {
     return `
     <section class="cesta">
       <h2>Tu carrito</h2>
+      <div class="ticket">
+        <h3>Tienda Lola Índigo</h2>
+        <div class="date-time">
+          <p id="dateP"></p>
+          <p id="timeP"></p>
+        </div>
           ${
             cart.length > 0
               ? cart
@@ -22,28 +28,32 @@ export const Cesta = () => {
                     (product) =>
                       `
             <article>
-              <img src="${product.cover}" alt="${
-                        product.name
-                      }" class="product-cover"/>
-              <div>
-                <p>${product.name}</p>
-                <p>${product.price * product.quantity} €</p>
-                <p>x${product.quantity}</p>
-              </div>
+                <p class="cart-product-name">${product.name}</p>
+                <p class="cart-product-quantity">x${product.quantity}</p>
+                <p class="cart-product-price-quantity">${
+                  product.price * product.quantity
+                }</p>
             </article>
             `
                   )
                   .join("") +
                 `
-                <p>Total: ${totalPrice} €</p>
+                <p class="cart-thanks">#Gracias por su compra</p>
+                <div class="cart-total-price">
+                  <p><strong>Total</strong></p>
+                  <p><strong>${totalPrice}</strong></p>
+                </div>
+                <img src="https://res.cloudinary.com/darvwfw0u/image/upload/v1743509276/barcode_tbonxh.png" alt="Código de barras" />
                 ${Button("Vaciar cesta", "primary", false, "clear-cart")}
                 `
-              : `   <div class="empty-shopping-cart">
-                      <img src="https://res.cloudinary.com/darvwfw0u/image/upload/v1743351343/shopping-cart_yq3swp.png" alt="Carrito de la compra vacío" />
-                      <a href="/tienda">Seguir comprando</a>
-                    </div>
+              : ` 
+                  <div class="empty-shopping-cart">
+                    <img src="https://res.cloudinary.com/darvwfw0u/image/upload/v1743437052/shopping-cart_xykwgf.png" alt="Carrito de la compra vacío" />
+                    <a href="/tienda">Seguir comprando</a>
+                  </div>
                   `
           }
+          </div>
     </section>
   `;
   };
@@ -53,8 +63,9 @@ export const Cesta = () => {
     document.getElementById("clear-cart")?.addEventListener("click", () => {
       localStorage.removeItem("cart");
       cart = [];
-      document.querySelector(".cesta").innerHTML = Cesta(); // Re-renderizar la cesta
+      document.querySelector(".cesta").innerHTML = Cesta();
       updateCart();
+      updateDateTime();
     });
   }, 100);
 
