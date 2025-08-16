@@ -14,7 +14,7 @@ const Footer = () => `
   </ul>
   <p class="copyright">
   ${copyright}
-    <a href="https://github.com/marinalsz" target="_blank" rel="noopener noreferrer">Marina López</a>
+    <a href="https://github.com/spidevmax" target="_blank" rel="noopener noreferrer">spidevmax</a>
   </p>
 </footer>
 `;
